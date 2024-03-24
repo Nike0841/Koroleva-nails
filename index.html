@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="css/fontello.css">
     
     <link rel="stylesheet" href="css/swiper-bundle.css">
-    <link rel="stylesheet" href="css/style.css?v=0.19" id="theme">
+    <link rel="stylesheet" href="css/style.css?v=0.20" id="theme">
     <title>akstudi0s</title>
 </head>
 <body> 
   <header id="header" class="header">  
     <nav class="navbar navbar-expand-md navbar-dark" style="background: #c834e0">
-        <div class="container-fluid">
+        <div class="container-fluid" >
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item" id="submenu">
                 <a class="nav-link active text-white toAnchor" aria-current="page" href="#Hero"> <i>Главная</i></a>
               </li>
               <li class="nav-item dropdown">
@@ -387,6 +387,12 @@
                         <div class="swiper-slide"><img src="img/manikur/manikur9.jpg" alt="Производство" class="img3"></div>
                         <div class="swiper-slide"><img src="img/manikur/manikur10.jpg" alt="Производство" class="img3"></div>
                         <div class="swiper-slide"><img src="img/manikur/manikur11.jpg" alt="Производство" class="img3"></div>
+                        <div class="swiper-slide"><img src="img/manikur/manikur06_24.jpg" alt="Производство" class="img3"></div>
+                        <div class="swiper-slide"><img src="img/manikur/manikur01_24.jpg" alt="Производство" class="img3"></div>
+                        <div class="swiper-slide"><img src="img/manikur/manikur02_24.jpg" alt="Производство" class="img3"></div>
+                        <div class="swiper-slide"><img src="img/manikur/manikur03_24.jpg" alt="Производство" class="img3"></div>
+                        <div class="swiper-slide"><img src="img/manikur/manikur04_24.jpg" alt="Производство" class="img3"></div>
+                        <div class="swiper-slide"><img src="img/manikur/manikur05_24.jpg" alt="Производство" class="img3"></div>
 
                     </div>
                     <!-- If we need pagination -->
@@ -454,11 +460,19 @@ if (localStorage.getItem('theme') === 'dark') {
 }
 
 </script>
-<script type="text/javascript" src="https://dikidi.ru/assets/js/widget_record/widget2.min.js"></script>
-<script type="text/javascript" src="https://dikidi.ru/assets/js/widget_record/widget2.min.js"></script>
 
+<script type="text/javascript" src="https://dikidi.ru/assets/js/widget_record/widget2.min.js"></script>
+<script type="text/javascript" src="https://dikidi.ru/assets/js/widget_record/widget2.min.js"></script>
+<script>
+  document.getElementById('navbarSupportedContent').addEventListener('click', function(event) {
+    if (event.target.matches('li')) {
+      document.getElementById('submenu').style.display = 'none'
+    }
+    else {document.getElementById('submenu').style.display = 'block'};
+  })
+</script>
 <script src="./js/swiper-bundle.js"></script>
 <script src="./js/swiper1.js"></script>
-<script src="./js/bootstrap.bundle.min.js?v=0.19"></script>
+<script src="./js/bootstrap.bundle.min.js?v=0.20"></script>
 </body>
 </html>
